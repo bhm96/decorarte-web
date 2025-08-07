@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   DecorArte - Planificación de eventos y decoración
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+ </head>
+ <body class="bg-white text-gray-700">
+  <!-- Menú de navegación -->
+  <nav class="fixed w-full bg-white shadow-md z-50">
+   <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <a class="logo-font text-3xl font-bold text-pink-400" href="#">
+     DecorArte
+    </a>
+    <!-- Menú desktop -->
+    <div class="hidden md:flex space-x-8">
+     <a class="nav-link text-gray-700 hover:text-pink-400 transition" href="#inicio">
+      Inicio
+     </a>
+     <a class="nav-link text-gray-700 hover:text-pink-400 transition" href="#nosotros">
+      Quiénes somos
+     </a>
+     <a class="nav-link text-gray-700 hover:text-pink-400 transition" href="#servicios">
+      Servicios
+     </a>
+     <a class="nav-link text-gray-700 hover:text-pink-400 transition" href="#galeria">
+      Galería
+     </a>
+     <a class="nav-link text-gray-700 hover:text-pink-400 transition" href="#contacto">
+      Contacto
+     </a>
+    </div>
+    <!-- Botón hamburguesa -->
+    <button class="md:hidden focus:outline-none" id="menu-toggle">
+     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      </path>
+     </svg>
+    </button>
+   </div>
+   <!-- Menú móvil -->
+   <div class="mobile-menu md:hidden bg-white" id="mobile-menu">
+    <div class="px-4 py-2 flex flex-col space-y-3">
+     <a class="block py-2 text-gray-700 hover:text-pink-400 transition" href="#inicio">
+      Inicio
+     </a>
+     <a class="block py-2 text-gray-700 hover:text-pink-400 transition" href="#nosotros">
+      Quiénes somos
+     </a>
+     <a class="block py-2 text-gray-700 hover:text-pink-400 transition" href="#servicios">
+      Servicios
+     </a>
+     <a class="block py-2 text-gray-700 hover:text-pink-400 transition" href="#galeria">
+      Galería
+     </a>
+     <a class="block py-2 text-gray-700 hover:text-pink-400 transition" href="#contacto">
+      Contacto
+     </a>
+    </div>
+   </div>
+  </nav>
+  <!-- Sección Inicio -->
+  <section class="hero-section min-h-screen flex items-center justify-center pt-20" id="inicio">
+   <div class="container mx-auto px-4 text-center">
+    <h1 class="logo-font text-5xl md:text-7xl font-bold text-pink-500 mb-4">
+     DecorArte
+    </h1>
+    <p class="text-2xl md:text-3xl text-gray-600 mb-8">
+     Cada detalle, una obra de arte.
+    </p>
+    <a class="inline-block bg-pink-400 hover:bg-pink-500 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105" href="#contacto">
+     Contáctanos
+    </a>
+   </div>
+  </section>
+  <!-- Sección Quiénes somos -->
+  <section class="py-20 bg-green-50" id="nosotros">
+   <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+     Quiénes somos
+    </h2>
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center">
+     <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+      <img alt="Equipo DecorArte" class="rounded-lg shadow-xl w-full h-auto" src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+     </div>
+     <div class="md:w-1/2">
+      <p class="text-lg text-gray-700 mb-6">
+       En DecorArte nacemos de la pasión por transformar espacios en experiencias memorables. Fundada en 2015, nuestra misión es crear ambientes que cuenten historias a través de cada detalle.
+      </p>
+      <p class="text-lg text-gray-700 mb-6">
+       Creemos en la
+       <span class="font-semibold text-pink-500">
+        creatividad
+       </span>
+       sin límites, la
+       <span class="font-semibold text-pink-500">
+        personalización
+       </span>
+       de cada elemento y el
+       <span class="font-semibold text-pink-500">
+        amor
+       </span>
+       por los pequeños detalles que hacen la diferencia.
+      </p>
+      <p class="text-lg text-gray-700">
+       Cada evento que planificamos es único, como lo son las personas que confían en nosotros para hacer de sus momentos especiales, verdaderas obras de arte.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Sección Servicios -->
+  <section class="py-20 bg-white" id="servicios">
+   <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+     Nuestros Servicios
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+     <!-- Servicio 1 -->
+     <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+      <div class="text-pink-400 text-4xl mb-4">
+       <i class="fas fa-palette">
+       </i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">
+       Decoración temática
+      </h3>
+      <p class="text-gray-600">
+       Creamos ambientes únicos basados en tus ideas favoritas: boho chic, vintage, tropical, rústico y más.
+      </p>
+     </div>
+     <!-- Servicio 2 -->
+     <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+      <div class="text-pink-400 text-4xl mb-4">
+       <i class="fas fa-candy-cane">
+       </i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">
+       Mesas dulces
+      </h3>
+      <p class="text-gray-600">
+       Diseñamos exquisitas presentaciones de postres y dulces que son un festín para la vista y el paladar.
+      </p>
+     </div>
+     <!-- Servicio 3 -->
+     <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+      <div class="text-pink-400 text-4xl mb-4">
+       <i class="fas fa-utensils">
+       </i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">
+       Bocaditos para eventos
+      </h3>
+      <p class="text-gray-600">
+       Deliciosas opciones gastronómicas presentadas con estilo para complementar tu decoración.
+      </p>
+     </div>
+     <!-- Servicio 4 -->
+     <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+      <div class="text-pink-400 text-4xl mb-4">
+       <i class="fas fa-gift">
+       </i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">
+       Detalles personalizados
+      </h3>
+      <p class="text-gray-600">
+       Desde invitaciones hasta recuerdos, cada elemento lleva tu sello personal.
+      </p>
+     </div>
+     <!-- Servicio 5 -->
+     <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+      <div class="text-pink-400 text-4xl mb-4">
+       <i class="fas fa-cloud">
+       </i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">
+       Arreglos con globos
+      </h3>
+      <p class="text-gray-600">
+       Instalaciones artísticas con globos que elevan cualquier espacio a otro nivel.
+      </p>
+     </div>
+     <!-- Servicio 6 -->
+     <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+      <div class="text-pink-400 text-4xl mb-4">
+       <i class="fas fa-calendar-check">
+       </i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">
+       Planificación completa
+      </h3>
+      <p class="text-gray-600">
+       Coordinamos todos los detalles para que disfrutes tu evento sin preocupaciones.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Sección Galería -->
+  <section class="py-20 bg-green-50" id="galeria">
+   <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+     Nuestra Galería
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+     <!-- Imagen 1 -->
+     <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+      <img alt="Decoración de evento" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519671488599-3faf83ee1e18?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+     </div>
+     <!-- Imagen 2 -->
+     <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+      <img alt="Mesa dulce" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+     </div>
+     <!-- Imagen 3 -->
+     <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+      <img alt="Decoración con globos" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1469&amp;q=80"/>
+     </div>
+     <!-- Imagen 4 -->
+     <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+      <img alt="Detalles de boda" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1519671488599-3faf83ee1e18?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+     </div>
+     <!-- Imagen 5 -->
+     <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+      <img alt="Decoración infantil" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+     </div>
+     <!-- Imagen 6 -->
+     <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+      <img alt="Evento corporativo" class="w-full h-64 object-cover" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1469&amp;q=80"/>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Sección Contacto -->
+  <section class="py-20 bg-white" id="contacto">
+   <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+     Contáctanos
+    </h2>
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row">
+     <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+      <h3 class="text-xl font-semibold text-gray-800 mb-4">
+       Información de contacto
+      </h3>
+      <p class="text-gray-600 mb-6">
+       Estamos aquí para ayudarte a crear el evento de tus sueños. Contáctanos para más información o para agendar una consulta gratuita.
+      </p>
+      <div class="space-y-4">
+       <div class="flex items-start">
+        <div class="text-pink-400 text-xl mr-4 mt-1">
+         <i class="fas fa-map-marker-alt">
+         </i>
+        </div>
+        <p class="text-gray-700">
+         Calle Decoración 123, Ciudad Eventos
+        </p>
+       </div>
+       <div class="flex items-start">
+        <div class="text-pink-400 text-xl mr-4 mt-1">
+         <i class="fas fa-phone-alt">
+         </i>
+        </div>
+        <p class="text-gray-700">
+         +1 234 567 890
+        </p>
+       </div>
+       <div class="flex items-start">
+        <div class="text-pink-400 text-xl mr-4 mt-1">
+         <i class="fas fa-envelope">
+         </i>
+        </div>
+        <p class="text-gray-700">
+         hola@decorarte.com
+        </p>
+       </div>
+      </div>
+      <div class="mt-8">
+       <h4 class="text-lg font-semibold text-gray-800 mb-4">
+        Síguenos en redes sociales
+       </h4>
+       <div class="flex space-x-4">
+        <a class="text-pink-400 hover:text-pink-500 text-2xl" href="#">
+         <i class="fab fa-facebook">
+         </i>
+        </a>
+        <a class="text-pink-400 hover:text-pink-500 text-2xl" href="#">
+         <i class="fab fa-instagram">
+         </i>
+        </a>
+        <a class="text-pink-400 hover:text-pink-500 text-2xl" href="#">
+         <i class="fab fa-pinterest">
+         </i>
+        </a>
+       </div>
+      </div>
+     </div>
+     <div class="md:w-1/2">
+      <form class="space-y-6" id="contact-form">
+       <div>
+        <label class="block text-gray-700 mb-2" for="nombre">
+         Nombre completo
+        </label>
+        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" id="nombre" name="nombre" type="text"/>
+        <p class="text-red-500 text-sm mt-1 hidden" id="nombre-error">
+         Por favor ingresa tu nombre
+        </p>
+       </div>
+       <div>
+        <label class="block text-gray-700 mb-2" for="email">
+         Correo electrónico
+        </label>
+        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" id="email" name="email" type="email"/>
+        <p class="text-red-500 text-sm mt-1 hidden" id="email-error">
+         Por favor ingresa un email válido
+        </p>
+       </div>
+       <div>
+        <label class="block text-gray-700 mb-2" for="telefono">
+         Teléfono
+        </label>
+        <input class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" id="telefono" name="telefono" type="tel"/>
+       </div>
+       <div>
+        <label class="block text-gray-700 mb-2" for="mensaje">
+         Mensaje
+        </label>
+        <textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400" id="mensaje" name="mensaje" rows="4"></textarea>
+        <p class="text-red-500 text-sm mt-1 hidden" id="mensaje-error">
+         Por favor ingresa tu mensaje
+        </p>
+       </div>
+       <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <button class="bg-pink-400 hover:bg-pink-500 text-white font-medium py-3 px-6 rounded-lg transition duration-300 flex-1" type="submit">
+         Enviar mensaje
+        </button>
+        <a class="bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center" href="https://wa.me/1234567890">
+         <i class="fab fa-whatsapp mr-2 text-xl">
+         </i>
+         WhatsApp
+        </a>
+       </div>
+      </form>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10">
+   <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+     <div class="mb-6 md:mb-0">
+      <a class="logo-font text-3xl font-bold text-pink-400" href="#">
+       DecorArte
+      </a>
+      <p class="mt-2 text-gray-400">
+       Cada detalle, una obra de arte.
+      </p>
+     </div>
+     <div class="flex flex-col items-center md:items-end">
+      <div class="flex space-x-6 mb-4">
+       <a class="text-gray-400 hover:text-pink-400 transition" href="#">
+        <i class="fab fa-facebook-f">
+        </i>
+       </a>
+       <a class="text-gray-400 hover:text-pink-400 transition" href="#">
+        <i class="fab fa-instagram">
+        </i>
+       </a>
+       <a class="text-gray-400 hover:text-pink-400 transition" href="#">
+        <i class="fab fa-pinterest-p">
+        </i>
+       </a>
+      </div>
+      <p class="text-gray-400 text-sm">
+       © 2023 DecorArte. Todos los derechos reservados.
+      </p>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script src="js/scripts.js">
+  </script>
+ </body>
+</html>
