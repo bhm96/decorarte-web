@@ -33,6 +33,7 @@
             let isValid = true;
             const nombre = document.getElementById('nombre');
             const email = document.getElementById('email');
+            const email = document.getElementById('telefono');
             const mensaje = document.getElementById('mensaje');
             
             // Validar nombre
@@ -51,7 +52,17 @@
             } else {
                 document.getElementById('email-error').classList.add('hidden');
             }
-            
+                
+            // Validar telefono
+            const phoneRegex = /^09\d{8}$/;
+            if (!phoneRegex.test(telefono.value.trim())) {
+                document.getElementById('telefono-error').textContent = 'Por favor ingresa un número válido (ej: 0998765432)';
+                document.getElementById('telefono-error').classList.remove('hidden');
+                isValid = false;
+            } else {
+                document.getElementById('telefono-error').classList.add('hidden');
+            }
+                
             // Validar mensaje
             if (mensaje.value.trim() === '') {
                 document.getElementById('mensaje-error').classList.remove('hidden');
