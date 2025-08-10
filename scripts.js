@@ -33,7 +33,7 @@
             let isValid = true;
             const nombre = document.getElementById('nombre');
             const email = document.getElementById('email');
-            const email = document.getElementById('telefono');
+            const telefono = document.getElementById('telefono');
             const mensaje = document.getElementById('mensaje');
             
             // Validar nombre
