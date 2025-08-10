@@ -30,8 +30,6 @@
 
         // Validación del formulario
         document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             let isValid = true;
             const nombre = document.getElementById('nombre');
             const email = document.getElementById('email');
@@ -63,9 +61,8 @@
             }
             
             // Si todo es válido, mostrar mensaje de éxito
-            if (isValid) {
-                alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
-                this.reset();
+            if (!isValid) {
+                e.preventDefault();
             }
         });
 
